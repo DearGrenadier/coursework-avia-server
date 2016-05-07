@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="AirAuth-Web.config Connection String" description="AirAuth Connection String used in web.config by the application to access the database." defaultValue="Data Source=avia.database.windows.net;Initial Catalog=Avia;Integrated Security=False;User ID=doster;Password=1qAZXSw2;Connect Timeout=60;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;Application Name=EntityFramework" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\dimon\\Documents\\Visual\ Studio\ 2015\\Projects\\Авиа\\AviaServer\\AviaServer\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='AirAuth']/@connectionString" />
+  </parameter>
+  <parameter name="AirportEntities-Web.config Connection String" description="AirportEntities Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/Database.Database.csdl|res://*/Database.Database.ssdl|res://*/Database.Database.msl;provider=System.Data.SqlClient;provider connection string=&quot;Data Source=avia.database.windows.net;Initial Catalog=Avia;Integrated Security=False;User ID=doster;Password=1qAZXSw2;Connect Timeout=60;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;App=EntityFramework&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\dimon\\Documents\\Visual\ Studio\ 2015\\Projects\\Авиа\\AviaServer\\AviaServer\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='AirportEntities']/@connectionString" />
+  </parameter>
+</parameters>

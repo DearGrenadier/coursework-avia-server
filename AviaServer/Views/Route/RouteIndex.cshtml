@@ -1,0 +1,54 @@
+﻿@model IEnumerable<AviaServer.Database.Route>
+
+@{
+    ViewBag.Title = "Index";
+}
+<style type='text/css'>
+    /*設定 數字靠右*/
+    td:nth-child(1){text-align: right;}
+    td:nth-child(2){text-align: right;}
+    td:nth-child(3){text-align: right;}
+</style>
+<h1 class="text-center"><strong>Route</strong></h1>
+<p class="text-center">
+    @Html.ActionLink("Create New", "RouteCreate", null, new { @class = "btn btn-danger btn-raised" })
+</p>
+<table class="table">
+    <tr>
+        <th></th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateStart)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateEnd)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Aircraft.GovId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Distination.Departure)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td style="text-align: left;">
+            @Html.ActionLink("Edit", "RouteEdit", new { id=item.Id }, new { @class = "btn btn-warning btn-raised" })
+        </td>
+        <td style="text-align: left;">
+            @Html.DisplayFor(modelItem => item.DateStart)
+        </td>
+        <td style="text-align: left;">
+            @Html.DisplayFor(modelItem => item.DateEnd)
+        </td>
+        <td style="text-align: left;">
+            @Html.DisplayFor(modelItem => item.Aircraft.GovId)
+        </td>
+        <td style="text-align: left;">
+            @Html.DisplayFor(modelItem => item.Distination.Departure)
+        </td>
+
+    </tr>
+}
+
+</table>

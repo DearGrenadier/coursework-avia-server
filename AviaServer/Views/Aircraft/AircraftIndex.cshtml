@@ -1,0 +1,53 @@
+﻿@model IEnumerable<AviaServer.Database.Aircraft>
+
+@{
+    ViewBag.Title = "Index";
+}
+<style type='text/css'>
+    /*設定 數字靠右*/
+    td:nth-child(1){text-align: right;}
+    td:nth-child(3){text-align: right;}
+</style>
+<h1 class="text-center"><strong>Aircraft</strong></h1>
+<p class="text-center">
+    @Html.ActionLink("Create New", "AircraftCreate",null,new {@class= "btn-raised btn btn-danger" })
+</p>
+<table class="table">
+    <tr>
+        <th></th>
+        <th>
+            @Html.DisplayNameFor(model => model.GovId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Capacity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td style="text-align: left;">
+            @Html.ActionLink("Edit", "AircraftEdit", new { id=item.Id },new {@class="btn btn-warning btn-raised"})
+        </td>
+        <td style="text-align: left;">
+            @Html.DisplayFor(modelItem => item.GovId)
+        </td>
+        <td style="text-align: left;">
+            @Html.DisplayFor(modelItem => item.Capacity)
+        </td>
+        <td style="text-align: left;">
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td style="text-align: left;">
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+
+    </tr>
+}
+
+</table>
